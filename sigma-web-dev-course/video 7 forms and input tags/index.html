@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1> Form to apply for sigma web dev TA(Teaching assistant)</h1>
+    <!-- options such as "post" are for giving large data to others-->
+    <!-- other options can be "get" for giving small data-->
+    <form action="post">
+        <div>
+            <!--input tags and label tag to label that input-->
+            <label for ="username">Enter your username</label>
+            <input type ="text" id="username" name="username" placeholder="Enter your username"  >
+            <!--id is used to uniquely identify any element-->
+        </div>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div><!--in one time, i can select only one of them, as they have the same name ie gender-->
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe</label>
+        </div>
+        <div>
+            <label for="comment">Comment</label>
+            <textarea name="comment" rows="4" cols="50" placeholder="Enter your comment here"></textarea>
+            
+        </div>
+        <!--type - radio,text,checkbox,comment-->
+        <div><!--another tag select for dropdown with options-->
+            <select name="fruits">
+                <option value = "apple">Apple</option>
+                <option value ="banana">Banana</option>
+                <option value = "cherry">Cherry</option>
+
+            </select>
+        </div>
+
+    </form>
+    
+    
+    
+</body>
+</html>

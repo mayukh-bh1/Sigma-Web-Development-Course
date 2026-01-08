@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <!--image-->
+    <img width="600" height="300" src ="image.png" alt="Eye">
+    <!--width or height should be used and alt can be used for a case where error occurs -->
+    <!--table-->
+    <!--line breaker-->
+    <table>
+        <caption>Details</caption><!--one of table tags-->
+
+        
+        <thead> <!--one of the tags for table-->
+            <tr>
+                <th colspan="3">Harry</th><!--head column1-->
+                <th >Age</th><!--head column2-->
+                <th>fav lang</th>
+            </tr><!--title row-->
+        </thead>
+        <tbody>
+            <tr><!--row1-->
+                <td colspan="3">Programmer</td><!--data column1-->
+                <!--colspan/rowspan attribute refers to the space(no. of cells) occupied by data/head-->
+                <td >30</td><!--column2-->
+                <td rowspan="2">java</td>
+
+            </tr>
+            <tr ><!--row1-->
+                <td colspan="3">Student</td><!--data column1-->
+                <!--colspan attribute refers to the space(no. of cells) occupied by data/head-->
+                <td >20</td><!--column2-->
+                
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Child</td>
+                
+                <td>10</td>
+                <td>html</td>
+            </tr>
+        </tfoot>
+        <!--4 parts of table - caption, header, body, footer -->
+    </table>
+<!--list-->
+<ul type="square"><!--unordered list(1,2,3, is not there just bullet points)-->
+    <li>Harry</li><!--type can be disc, square, triangle . disc is by default-->
+    <li> Rohan</li>
+    <li>Subham</li>
+</ul>
+
+<ol type="I"><!--ordered list(1,2,3 is there)-->
+    <li>Harry</li><!----type I, i are uppercase roman and lowercase roman respectively. type 1 is default-->
+    <li>Rohan</li><!-- type A and a are also for alphabetical order-->
+    <li>Subham</li>
+</ol>
+<dl><!--definition list - term and then its definition-->
+    <dt>Java</dt>
+    <dd>java is a interpreted language</dd>
+    <dt>C</dt>
+    <dd>C is a compiled language</dd>
+
+</dl>
+
+
+</body>
+</html>
