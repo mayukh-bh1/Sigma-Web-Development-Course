@@ -1,0 +1,39 @@
+<!--
+inline css- adding styles in the same line of the section or text with 
+style attribute(not a good practice if there 100 lines - i have to add
+style attribute 100 times- if i want to change- bulk edit is not possible)
+(avoid)
+internal css- style tag (html file will expand unnecessarily)(small project)
+external css- making a different css file(most popular)(large project)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!--internal css-->
+    <style>
+        div{
+            color:red;
+            background-color:yellow;
+        }
+    </style>
+    <!--external css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="color:yellow ;background-color: red;">About me</h1>
+    <div>I am a good boy</div>
+    <div>
+        <ol>
+            <li>inline css</li>
+            <li>internal css</li>
+            <li>external css</li>
+        </ol>
+    </div>
+    <p>Hello hi bye bye</p>
+    
+</body>
+</html>
+
