@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Selectors</title>
+    <style>
+        /* element selector */
+        div{
+            background-color: red;
+        }
+        a{
+            color:yellow;
+        }
+        /*Class selector */
+        .red{
+            background-color: white;
+        }
+        /*id selector*/
+        #yellow{
+            background-color: blue;
+        }
+        /*Child Selector*/
+        div>p{
+            background-color:yellow;
+            color: red;
+        }
+        /*Descendant(it may be not directly under div, but is under div) Selector*/
+        div p{
+            color: blue;
+            background-color: brown;
+        }
+        /*all/universal selector*/
+        *{
+            margin:0;
+            padding: 0;
+        }
+        /*pseudo selector- not used so often*/
+        a:visited{
+            color:red;
+        }
+        a:link{
+            color:green;
+        }
+        /*active means when clicked*/
+        a:active{
+            background-color: red;
+        }
+        a:hover{
+            background-color: yellowgreen;
+        }
+        p:first-child{
+            background-color:aqua;
+        }
+
+
+
+
+    </style>
 </head>
 <body>
-    
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <div>Hello
+        <p>hi</p>
+        <article>it is an article
+            <p>Hello</p>
+        </article>
+        
+    </div>
+    <div class="red">Hi</div>
+    <div id="yellow">yo</div>
+    <!--problem with element selector is if i don't want the 2nd div to be red,
+    it will be. so we define classes to classify which one to be different-->
+
+    <a href="https://www.google.com">go to google</a>
 </body>
 </html>
