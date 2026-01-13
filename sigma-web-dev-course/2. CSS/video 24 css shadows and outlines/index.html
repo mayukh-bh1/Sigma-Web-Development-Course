@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css shadows and outlines</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            padding: 34px ;
+            box-shadow: 5px 5px 15px 5px #d03030;
+            margin:12px;
+            /* box-shadow: h-offset v-offset blur spread color inset;
+            h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+            blur: The larger the value, the blurrier the shadow.
+            spread: Expands or shrinks the shadow size.
+            color: Defines the shadow color.
+            inset: Makes the shadow inner */
+            text-shadow: 5px 5px 15px #4531a5;
+            /* text-shadow: h-offset v-offset blur color; */
+        }
+        .box1{
+            border: 2px solid black;
+            padding: 34px ;
+            border-radius:23px;/*curves the border at edges*/
+            outline:2px solid red;/*outline cant be curved directly, it will 
+            get curved with border*/
+            box-shadow: 5px 5px 15px 5px #269340 inset;
+            margin:10px
+            /* box-shadow: h-offset v-offset blur spread color inset;
+            h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+            blur: The larger the value, the blurrier the shadow.
+            spread: Expands or shrinks the shadow size.
+            color: Defines the shadow color.
+            inset: Makes the shadow inner */
+        }
+        p{
+            text-shadow:5px 5px 5px red;
+            outline:2px solid black;/*outline and border are quite same*/
+            /*outline is outside border*/
+            outline-offset:5px;/*it increases or decreases the gap between
+            outline and border*/
+            border:2px solid red;
+            border-radius: 2px;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box">hi </div>
+    <div class="box1">hello</div>
+    <p>Lorem ipsum dolor, sit amet 
+        consectetur adipisicing elit. Nesciunt, accusamus.</p>
+    
+</body>
+</html>

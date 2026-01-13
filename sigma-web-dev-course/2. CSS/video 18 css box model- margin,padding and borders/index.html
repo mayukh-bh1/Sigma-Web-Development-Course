@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: aqua;
+        }
+        /*space between text and border*/
+        /*margin is another space, outside border/element*/
+        *{
+           margin: 0;
+           padding:0; 
+        }
+        .box1{
+            color:yellow;
+            padding: 10px;
+            margin:25px;
+            border: 2px solid blue;
+            height: 200px;
+            box-sizing: border-box;/*height is sum of border,content
+             and padding(not margin)*/
+             /*before adding this feature height= content(not padding and border)*/
+            
+        }
+        .box2{
+            color:red;
+            color:yellow;
+            padding: 10px;
+            margin:25px;
+            border: 2px solid black;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        /*as we see in output the space between the two boxes should be equal to 
+        double the space between the screen topline as we expect both their margin
+        space to get summed up. but it doesn't happen and it is called margin
+        collapse(if they are same, only 1 is considered, if one is bigger, bigger
+        one is considered)*/
+
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div><!--this is done when 2 elements have 
+    some same properties and some different as well then two class names are assigned-->
+    <div class="box box2">I am another box</div>
+    <img height="250"src="box model.png">
+    
+</body>
+</html>

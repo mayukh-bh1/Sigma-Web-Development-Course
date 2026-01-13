@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            /*width: 2048px;1 pixel= 1/96 of inch*/
+            margin:auto;/*in means the div will automatically center(
+            only block element , same logic do-not apply on inline elements*/
+            
+            width:50vw;
+            /*sometimes you don't know that what is the size of your screen*/
+            /*vw means view board width(the screen that the 
+            website is showing) and 100vw means full screen and 50vw means 
+            half screen and so on*/
+            /*there are other two units vmin and vmax
+            it means vmin the minimum one(width or height)
+            in laptop , vmin would be height and vmax would be width
+            in mobile , vmin would be width and vmax would be height
+            100vmin/100vmax covers height and width according to device and vice versa
+            */
+            /*another unit will be %, percentage means % of parent element*/
+            background-color: aquamarine;
+        }
+        .container{
+            border: 2px solid black;
+            width: 2048px;
+            width:50vw;/*override*/
+            margin: 23px auto; 
+            min-height:50vh;/*view board height*/
+            /*min-height fixes the minimum height of div but at the same time
+            adjusts when text increases*/
+            background-color: aquamarine;
+            font-size:12px;
+        }   
+        .container p{
+            font-size:2em;
+            /*it has inherited the 1 unit font size = 12px from container
+            now 1unit = 1 em , if we increase it to 2 em or 1.5 em or so on
+            it will become 24px or 18px etc.*/
+
+        }
+        html{/*root element*/
+            font-size: 15px;
+        }
+        .container content{
+            font-size: 2rem;/*2 times of root element= 2*15=30*/
+        } 
+    </style>
+</head>
+<body>
+    <h1 class="box" >Hello</h1>
+    <div class="container">
+        Hi
+        <p>Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Harum, expedita?</p>
+        <content>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, distinctio.</content>
+    </div>
+
+    
+</body>
+</html>

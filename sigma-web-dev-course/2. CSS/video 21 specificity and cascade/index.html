@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        h1{/*specificity-1*/
+            color:aqua;
+        }
+        h1.yellow{/*specificity-10+1=1*/
+            color:rgb(76, 181, 181);
+        }
+        .yellow{/*specificity-10*/
+            color:yellow;
+        }
+        .cred{
+            color:red;
+        }
+        .cpurple{
+            color:purple;
+        }
+        a.rohanclass.harryclass[href]:hover{
+            background-color: red;
+        }
+        /*specificity= a-element- 1
+                       rohanclass - class -10
+                       harryclass -class -10
+                       [href]-attribute- 10
+                       :hover-pseudoclass-10
+                       total=41*/
+        
+    </style>
+</head>
+<body>
+    <h1 class="yellow cred cpurple">CSS Specificity</h1>
+    <!--there are 4 parameters and 4 colors but the output
+    is showing purple as color
+    on what basis it was decided
+    cascade algorithm is there in css
+    it decides which properties will be applied for resolving
+    conflicts  -->
+    <!--
+    1)first factor: Override: the last one will be considered as
+    it overrides the others
+    2)second factor: Specificity- which selector has the highest 
+    priority
+    inline(1000)>id(100)>class/attribute/pseudo-class(10)>element/
+    pseudo-element(1)>universal(0)
+    in this case, class selector is prioritized over element selector
+    3)Origin- if you haven't written any code, browser will
+    write its own code
+    source- 1)browser 2)you and you>browser
+    4)importance- important(10000) is a keyword in css, and if it is used
+    it will have highest priority(more than inline as well)-->
+
+    
+</body>
+
+</html>

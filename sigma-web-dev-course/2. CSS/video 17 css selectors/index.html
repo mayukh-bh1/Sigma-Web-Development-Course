@@ -52,6 +52,12 @@
         p:first-child{
             background-color:aqua;
         }
+        /*attribute selector*/
+        [data-x=a]{
+            background-color: red;
+        }
+
+
 
 
 
@@ -60,7 +66,7 @@
 </head>
 <body>
     <main class="one">
-        <p>I am first</p>
+        <p data-x="a">I am first</p>
         <p>I am second</p>
     </main>
     <div>Hello
