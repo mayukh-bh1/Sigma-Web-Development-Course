@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(92, 193, 213);
+    
+}
+th{
+  
+    border: 2px solid black ;
+}
+table{
+    border: 2px solid black;
+}
+    
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color:red;
+}
+h4{
+    text-align:center;
+    border:2px solid black;
+    margin:2px;
+    padding:10px;
+    height:100px ;
+    width: 1400px ;
+}
+
+    
