@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(175, 180, 181);
+    
+}
+th{
+
+    border: 2px solid black ;
+}
+table{
+    border: 2px solid black;
+}
+
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+h2{
+    text-align:center;
+}
+
+.bg-yellow{
+    background-color: yellow;
+}
+#bg-red{
+    background-color: red;
+
+}

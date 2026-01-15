@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .calculator {
+            background-color: white;
+            width: 300px;
+            margin: 50px auto;
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #display {
+            width: 280px;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid gray;
+        }
+
+        button {
+            width: 65px;
+            height: 50px;
+            font-size: 18px;
+            margin: 3px;
+            cursor: pointer;
+        }
+
+        .row {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="text" id="display" value="0" readonly>
+        
+        <div class="row">
+            <button onclick="clearAll()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="addToDisplay('/')">÷</button>
+        </div>
+        
+        <div class="row">
+            <button onclick="addToDisplay('7')">7</button>
+            <button onclick="addToDisplay('8')">8</button>
+            <button onclick="addToDisplay('9')">9</button>
+            <button onclick="addToDisplay('*')">×</button>
+        </div>
+        
+        <div class="row">
+            <button onclick="addToDisplay('4')">4</button>
+            <button onclick="addToDisplay('5')">5</button>
+            <button onclick="addToDisplay('6')">6</button>
+            <button onclick="addToDisplay('-')">-</button>
+        </div>
+        
+        <div class="row">
+            <button onclick="addToDisplay('1')">1</button>
+            <button onclick="addToDisplay('2')">2</button>
+            <button onclick="addToDisplay('3')">3</button>
+            <button onclick="addToDisplay('+')">+</button>
+        </div>
+        
+        <div class="row">
+            <button onclick="addToDisplay('0')">0</button>
+            <button onclick="addToDisplay('.')">.</button>
+            <button onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let displayValue = "0";
+
+        function addToDisplay(value) {
+            let display = document.getElementById("display");
+            if (displayValue === "0") {
+                displayValue = value;
+            } else {
+                displayValue = displayValue + value;
+            }
+            display.value = displayValue;
+        }
+
+        function clearAll() {
+            displayValue = "0";
+            document.getElementById("display").value = displayValue;
+        }
+
+        function deleteLast() {
+            displayValue = displayValue.slice(0, -1);
+            if (displayValue === "") {
+                displayValue = "0";
+            }
+            document.getElementById("display").value = displayValue;
+        }
+
+        function calculateResult() {
+            
+            let result = eval(displayValue);
+            displayValue = result.toString();
+            document.getElementById("display").value = displayValue;
+    }
+    </script>
+
+</body>
+</html>
