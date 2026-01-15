@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bag{
+            border: 2px solid black;
+            height: 133px;
+            width: 80vw;
+            margin: 3px ;
+            padding: 3px;
+        }
+        .bag1{
+            background-color: aqua;
+            position:relative;
+            
+            top:30px;
+        }
+        .bag2{
+            background-color: rgb(29, 111, 183);
+            /* position:relative;by default -static */
+            /* top: 0px;/*box2 position has been changed */
+            left: 0px;
+            z-index:5;
+            position:absolute;
+            /*if we make any element absolute its position will be independent
+            of any other element and other elements will move relative to 
+            that absolute element*/
+
+            /*now box2 is above or say overlapping/riding box3,but we can
+            change that by using z-index
+            if z-index of a element is greater it will appear above the low
+            z-index element*/
+        }
+        .bag3{
+            /* position:absolute; */
+            background-color: antiquewhite;
+            z-index:6;
+        
+        }
+        .bag4{
+            background-color: aquamarine;
+            position:fixed;/*it will be independent of any other element and
+            gets fixed in a spot of our choice. and it will be visble on screen
+            fully even if we try to scroll past it.*/
+        }
+        .parent{
+            border:2px solid black;
+            margin:5px;
+            padding:10px;
+            position:absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="bag bag1">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+        <div class="bag bag2">Lorem ipsum dolar, sit amet consectetur adipisicing elit.</div>
+        <div class="bag bag3">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+        <div class="bag bag4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+    </div>
+</body>
+</html>

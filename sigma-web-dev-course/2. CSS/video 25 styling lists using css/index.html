@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <style>
+        div ul li{
+            /*list-style: devanagari;/*if list-style is none than bullets/numbers will not be there*/
+            background-color: yellow;
+            /*markers such as bullet, or numbers stay outside the yellow background
+            do do this we can use list-style-position*/
+            /* list-style-position:inside; */
+            border: 2px solid black;
+            /* list-style-image:url("image.png"); /*we can use images as well */
+            /*list-style-type:"😊";/*we can also use emojis as markers. (for getting emojis we click 
+            window button + .)*/
+            /* list-style:disc inside url("image.png"); */
+            list-style:none;
+            display:flex;
+
+        }
+        nav ul{
+            list-style:none;
+            display:flex;/*it is made to make the nav bar horizontal*/
+            
+        }
+        nav ul li{
+            padding:23px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 40vw;
+            border:2px solid black;
+            height:40vh;
+            /* overflow: scroll;/*there is other option such as hidden etc. */
+            /* overflow:auto;/*it means that if there is overflow than it will scroll, if no need  */
+            /* for that, then no scroll;*/ 
+            /* white-space: nowrap;/*by default , the text doesn't cross the vertical border, but  */
+            /* cross the horizontal border , but it reverses it.
+            so if there is a scroll option, it will be horizontal scroll rather vertical scroll*/ 
+            /* text-overflow: ellipsis;it will hide the content that is overflowed and add ... */
+            /* overflow-x:hidden;
+            overflow-y:scroll; */
+            /*the above code can be done in 1 line as well- overflow: x y;*/
+            overflow: hidden scroll;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >I am a boy Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit
+         amet consectetur adipisicing elit. Laboriosam suscipit at, minus ipsum 
+        perspiciatis, expedita fugit consequatur provident enim qui neque sint 
+        praesentium id sequi?</div>
+    
+</body>
+</html>
